@@ -1,0 +1,16 @@
+//-------------------------------------------------------------------------------
+  @name: article
+  -------------------------------------------------------------------------------//
+
+// article
+.article
+  .container
+    h2.article__title Check out our latest article
+    .article__list 
+      each val in data
+        -
+          data = val
+        include ../components/article.pug
+    .article__btn
+      a.btn.btn--secondary(href='')
+        | View all

@@ -1,0 +1,26 @@
+//-------------------------------------------------------------------------------
+  @name: section description
+  -------------------------------------------------------------------------------//
+
+//section-description
+.section-description(class=data.modifier !== undefined ? 'section-description--' + data.modifier : '')
+  .container
+    .section-description__box
+      .section-description__img
+        ='\n'
+        img.section-description__img__el(src="assets/img/dummy/"+data.img alt=data.title)/
+      .section-description__txt
+        .section-description__txt__wrapper
+          h3.section-description__title
+            | !{data.title}
+          p.section-description__desc
+            | !{data.desc}
+          ='\n'
+          a.btn.btn--secondary(href=data.btnTo) 
+            | !{data.txtBtn}
+            if data.btnIcon !== undefined
+              ='\n'
+              i(class=data.btnIcon)
+              ='\n'
+='\n'
+// /section-description

@@ -1,0 +1,65 @@
+.our-services {
+  $os: &;
+  &__item {
+    max-width: 350px;
+    &:hover {
+      #{$os} {
+        &__img__el {
+          transform: translateY(-4px);
+        }
+        &__txt__title {
+          color: color(blue, 1);
+        }
+      }
+    }
+  }
+  &__box {
+    min-height: 354px;
+    border-radius: 20px;
+    box-shadow: $shadowCard;
+    background-color: color(white);
+    position: relative;
+    padding: 56px 40px;
+    &__link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: zi(cardLink);
+    }
+  }
+  &__img {
+    height: 90px;
+    margin-bottom: 24px;
+    &__el {
+      display: block;
+      height: 100%;
+      transition: all 350ms ease;
+      @include small {
+        margin: 0 auto;
+      }
+    }
+  }
+  &__txt {
+    text-align: left;
+    @include small {
+      text-align: center;
+    }
+    &__title {
+      @include font-size(24);
+      font-weight: fw(bold);
+      color: color(black, 1);
+      margin-bottom: 24px;
+      transition: all 300ms ease;
+      @include medium {
+        @include font-size(20);
+      }
+    }
+    &__desc {
+      @include font-size(16);
+      font-weight: fw(light);
+      margin-bottom: 0;
+    }
+  }
+}

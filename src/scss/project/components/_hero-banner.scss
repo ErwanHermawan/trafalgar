@@ -1,0 +1,74 @@
+.banner {
+  padding-bottom: 80px;
+  @include medium {
+    padding-bottom: 40px;
+  }
+  &__content {
+    @include clearfix;
+    @include small {
+      text-align: center;
+    }
+  }
+  &__txt {
+    display: table;
+    width: 50%;
+    float: left;
+    min-height: 518px;
+    padding-right: 100px;
+    @include large {
+      min-height: 415px;
+      padding-right: 60px;
+    }
+    @include medium {
+      min-height: 310px;
+    }
+    @include small {
+      display: block;
+      width: 100%;
+      min-height: initial;
+      padding-right: 0;
+    }
+    &__wrapper {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__title {
+    @include font-size(48);
+    font-weight: fw(bold);
+    color: color(black, 1);
+    margin-bottom: 25px;
+    @include medium {
+      @include font-size(24);
+    }
+  }
+  &__desc {
+    @include font-size(18);
+    color: color(grey, 1);
+    margin-bottom: 45px;
+    @include small {
+      @include font-size(16);
+      margin-bottom: 30px;
+    }
+  }
+  &__img {
+    float: right;
+    width: 50%;
+    @include small {
+      float: none;
+      max-width: 280px;
+      width: 100%;
+      margin: 0 auto 24px;
+    }
+    &__el {
+      display: block;
+      width: 600px;
+      max-width: initial;
+      @include large {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+//-------------------------------------------------------------------------------
+  @name: hero banner
+  -------------------------------------------------------------------------------//
+
+// banner-item
+.banner__item
+  .banner__img
+    ='\n'
+    img.banner__img__el(src="assets/img/dummy/"+data.img alt=data.title)/
+  .banner__txt
+    .banner__txt__wrapper
+      h1.banner__title
+        | !{data.title}
+      p.banner__desc
+        | !{data.desc}
+      ='\n'
+      a.btn.btn--primary(href="#") Consult today
+='\n'
+// banner

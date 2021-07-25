@@ -1,0 +1,16 @@
+extends ../templates/default.pug
+
+//- Head
+block siteHeader
+  -
+    navActive = "home";
+    siteTitle = 'Home';
+
+//- Body
+block siteContent
+  include home/hero-banner.pug
+  include home/our-services.pug
+  include home/leading-healtcare.pug
+  include home/download-apps.pug
+  include home/testimonials.pug
+  include home/article.pug

@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Layout: Testimonial
+   ========================================================================== */
+
+.testimonials {
+  $t: &;
+  padding: 60px 0;
+  color: color(white);
+  @include medium {
+    padding: 40px 0;
+  }
+  &__box {
+    background-image: linear-gradient(to left bottom, color(blue, 2) 0%, color(blue, 3) 100%);
+    padding: 64px 118px;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    @include medium {
+      padding: 60px 40px;
+    }
+    @include small {
+      padding: 40px 24px;
+    }
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 130px;
+      height: 120px;
+      @include small {
+        content: none;
+        display: none;
+      }
+    }
+    &::before {
+      top: -20px;
+      right: -50px;
+      z-index: 1;
+      background: url('../img/bg/element-2.png') no-repeat center/100%;
+    }
+    &::after {
+      bottom: 40px;
+      left: -50px;
+      z-index: -1;
+      background: url('../img/bg/element-3.png') no-repeat center/100%;
+    }
+  }
+  &__title {
+    @include font-size(36);
+    font-weight: fw(bold);
+    text-align: center;
+    @include small {
+      @include font-size(24);
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 56px;
+      height: 2px;
+      margin: 24px auto 32px;
+      background-color: color(white);
+    }
+  }
+}

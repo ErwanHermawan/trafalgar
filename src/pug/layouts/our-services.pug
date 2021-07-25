@@ -1,0 +1,21 @@
+//-------------------------------------------------------------------------------
+  @name: Blog
+  -------------------------------------------------------------------------------//
+
+.our-services
+  .our-services__bg
+  .container
+    h2.our-services__title
+      | !{data.title}
+    p.our-services__desc
+      | !{data.desc}
+    .our-services__list
+      each val in data.list
+        -
+          data = val
+        include ../components/our-services.pug
+    .our-services__btn
+      ='\n'
+      a.btn.btn--secondary(href="our-services.html")
+        | Learn more
+      ='\n'
