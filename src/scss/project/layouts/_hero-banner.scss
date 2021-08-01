@@ -77,13 +77,9 @@ Layout: hero banner
   &.owl-carousel {
     #{$hb}__img__el,
     .owl-item img {
-      width: 108%;
+      width: 124%;
       @include medium {
         width: 100%;
-      }
-      @include small {
-        width: 80%;
-        margin: 0 auto;
       }
     }
     .owl-dot {

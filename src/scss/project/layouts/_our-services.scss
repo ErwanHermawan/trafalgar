@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Layout: Footer
+   Layout: Our Services
    ========================================================================== */
 
 .our-services {
@@ -11,34 +11,18 @@
     padding: 40px 0;
   }
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 48%;
     transform: translateY(-50%);
     left: -266px;
     width: 938px;
     height: 670px;
-    background: url('../img/bg/bg.png') no-repeat center/100%;
+    background: url("../img/bg/bg.png") no-repeat center/100%;
     z-index: -1;
     @include medium {
       content: none;
       display: none;
-    }
-  }
-  &__title {
-    @include font-size(36);
-    font-weight: fw(bold);
-    color: color(black, 1);
-    @include small {
-      @include font-size(24);
-    }
-    &::after {
-      content: '';
-      display: block;
-      width: 56px;
-      height: 2px;
-      margin: 24px auto 32px;
-      background-color: color(black, 1);
     }
   }
   &__desc {
@@ -54,7 +38,7 @@
     @include small {
       @include font-size(16);
       margin-bottom: 32px;
-    } 
+    }
   }
   &__list {
     margin-left: -16px;

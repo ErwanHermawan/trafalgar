@@ -6,9 +6,15 @@
   &__item {
     display: table;
     width: 100%;
-    padding: 32px 0 64px;
+    padding: 24px 0 48px;
     overflow: hidden;
     position: relative;
+    @include medium {
+      padding: 40px 0 56px;
+    }
+    @include small {
+      padding: 32px 0 48px;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -30,51 +36,43 @@
   &__wrapper {
     display: table-cell;
     vertical-align: middle;
-    font-size: 0;
+    @include clearfix;
   }
   &__img {
-    display: inline-block;
-    vertical-align: middle;
-    width: 48%;
-    @include small {
-      display: block;
+    float: right;
+    width: 52%;
+    @include medium {
+      float: none;
       width: 100%;
+      margin-bottom: 32px;
     }
     &__el {
       display: block;
-      width: 108%;
+      width: 124%;
       height: auto;
       max-width: initial;
       @include medium {
         width: 100%;
       }
-      @include small {
-        width: 80%;
-        margin: 0 autox;
-      }
     }
   }
   &__txt {
-    display: inline-block;
-    vertical-align: middle;
-    width: 52%;
+    float: left;
+    width: 48%;
+    padding-top: 145px;
     padding-right: 74px;
     @include large {
       padding-right: 48px;
     }
-    @include large {
-      padding-right: 24px;
-    }
-    @include small {
-      display: block;
-      width: 100%;
-      height: auto;
+    @include medium {
+      padding-top: 0;
+      float: none;
+      width: auto;
       padding-right: 0;
-      margin-bottom: 32px;
     }
   }
   &__title {
-    max-width: 440px;
+    max-width: 428px;
     @include font-size(48);
     font-weight: fw(bold);
     margin-bottom: 24px;
@@ -89,7 +87,6 @@
     }
   }
   &__desc {
-    max-width: 500px;
     @include font-size(22);
     font-weight: fw(light);
     margin-bottom: 48px;

@@ -3,12 +3,12 @@
   -------------------------------------------------------------------------------//
 
 .our-services
-  .our-services__bg
   .container
-    h2.our-services__title
-      | !{data.title}
-    p.our-services__desc
-      | !{data.desc}
+    .our-services__head
+      h2.text-title
+        | !{data.title}
+      p.our-services__desc
+        | !{data.desc}
     .our-services__list
       each val in data.list
         -
