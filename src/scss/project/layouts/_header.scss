@@ -8,7 +8,7 @@
   width: 100%;
   top: 0;
   padding: 56px 0;
-  transition: all .35s ease;
+  transition: all 0.35s ease;
   z-index: zi(header);
   @include large {
     padding: 32px 0;
@@ -16,7 +16,7 @@
   @include medium {
     padding: 24px 0;
     &::before {
-      content: '';
+      content: "";
       position: fixed;
       top: 88px;
       left: 0;
@@ -24,8 +24,8 @@
       width: 100%;
       opacity: 0;
       visibility: hidden;
-      background-color: rgba(color(black, 1), .75);
-      transition: all .75s ease .65s;
+      background-color: rgba(color(black, 1), 0.75);
+      transition: all 0.75s ease 0.65s;
       @include small {
         top: 72px;
       }
@@ -42,7 +42,7 @@
   .scroll-down & {
     box-shadow: none;
     transform: translateY(-100%);
-    transition: all .5s ease;
+    transition: all 0.5s ease;
   }
 
   .header-on-scroll & {
@@ -77,17 +77,22 @@
     margin: 0;
     @include medium {
       float: none;
-      @include scroll('y', 'touch', 'show');
+      @include scroll("y", "touch", "show");
       position: fixed;
       top: 88px;
       left: 0;
       bottom: 0;
       width: 100%;
       transform: scaleY(0);
-      background-image: linear-gradient(to bottom, color(blue, 2) 0%, color(blue, 2) 1%, color(blue, 3) 100%);
+      background-image: linear-gradient(
+        to bottom,
+        color(blue, 2) 0%,
+        color(blue, 2) 1%,
+        color(blue, 3) 100%
+      );
       padding: 64px 48px 72px;
       transform-origin: top center;
-      transition: all .45s ease .6s;
+      transition: all 0.45s ease 0.6s;
       .show-nav & {
         transform: none;
         transition-delay: 0s;
@@ -114,7 +119,7 @@
         margin-bottom: 40px;
         transform: translateY(12px);
         opacity: 0;
-        transition: all .5s ease;
+        transition: all 0.5s ease;
         @include font-size(24);
         @for $i from 1 through 5 {
           $delay: 350 - ($i * 50) + ms;
@@ -146,14 +151,32 @@
     &__link {
       text-decoration: none;
       display: block;
-      transition: all .3s ease;
-      opacity: .5;
+      transition: all 0.3s ease;
+      opacity: 0.5;
       &:hover {
         opacity: 1;
       }
       &--active {
         opacity: 1;
         font-weight: fw(bold);
+        padding-left: 40px;
+        &::before {
+          content: "";
+          position: absolute;
+          height: 1px;
+          width: 24px;
+          top: 50%;
+          left: 0;
+          -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          border-radius: 4px;
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+          background-color: color(white);
+        }
       }
     }
   }
@@ -164,11 +187,11 @@
       display: block;
       margin-right: -5px;
       &__bar {
-        transition: .25s background-color;
+        transition: 0.25s background-color;
       }
       &__bar::before,
       &__bar::after {
-        transition: .25s top .2s, .25s transform 0s;
+        transition: 0.25s top 0.2s, 0.25s transform 0s;
       }
       .show-nav & {
         &__bar {
@@ -183,7 +206,7 @@
           &::before,
           &::after {
             top: 0;
-            transition: .25s top 0s, .25s transform .2s;
+            transition: 0.25s top 0s, 0.25s transform 0.2s;
           }
         }
       }

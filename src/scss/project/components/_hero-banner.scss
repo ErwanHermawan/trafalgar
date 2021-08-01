@@ -1,74 +1,106 @@
-.banner {
-  padding-bottom: 80px;
-  @include medium {
-    padding-bottom: 40px;
+/* ==========================================================================
+   Components: hero banner
+   ========================================================================== */
+
+.hero-banner {
+  &__item {
+    display: table;
+    width: 100%;
+    padding: 32px 0 64px;
+    overflow: hidden;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 40px;
+      left: -40px;
+      z-index: zi(banner-item-before);
+      width: 130px;
+      height: 115px;
+      background: url(../img/bg/element-1.png) no-repeat center/100%;
+      @include medium {
+        top: 20px;
+      }
+      @include small {
+        content: none;
+        display: none;
+      }
+    }
   }
-  &__content {
-    @include clearfix;
+  &__wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 0;
+  }
+  &__img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 48%;
     @include small {
-      text-align: center;
+      display: block;
+      width: 100%;
+    }
+    &__el {
+      display: block;
+      width: 108%;
+      height: auto;
+      max-width: initial;
+      @include medium {
+        width: 100%;
+      }
+      @include small {
+        width: 80%;
+        margin: 0 autox;
+      }
     }
   }
   &__txt {
-    display: table;
-    width: 50%;
-    float: left;
-    min-height: 518px;
-    padding-right: 100px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 52%;
+    padding-right: 74px;
     @include large {
-      min-height: 415px;
-      padding-right: 60px;
+      padding-right: 48px;
     }
-    @include medium {
-      min-height: 310px;
+    @include large {
+      padding-right: 24px;
     }
     @include small {
       display: block;
       width: 100%;
-      min-height: initial;
+      height: auto;
       padding-right: 0;
-    }
-    &__wrapper {
-      display: table-cell;
-      vertical-align: middle;
-      width: 100%;
-      height: 100%;
+      margin-bottom: 32px;
     }
   }
   &__title {
+    max-width: 440px;
     @include font-size(48);
     font-weight: fw(bold);
+    margin-bottom: 24px;
     color: color(black, 1);
-    margin-bottom: 25px;
     @include medium {
+      max-width: initial;
+      @include font-size(36);
+      margin-bottom: 16px;
+    }
+    @include small {
       @include font-size(24);
     }
   }
   &__desc {
-    @include font-size(18);
+    max-width: 500px;
+    @include font-size(22);
+    font-weight: fw(light);
+    margin-bottom: 48px;
     color: color(grey, 1);
-    margin-bottom: 45px;
+    @include medium {
+      max-width: initial;
+      margin-bottom: 32px;
+    }
     @include small {
       @include font-size(16);
-      margin-bottom: 30px;
-    }
-  }
-  &__img {
-    float: right;
-    width: 50%;
-    @include small {
-      float: none;
-      max-width: 280px;
-      width: 100%;
-      margin: 0 auto 24px;
-    }
-    &__el {
-      display: block;
-      width: 600px;
-      max-width: initial;
-      @include large {
-        width: 100%;
-      }
+      margin-bottom: 24px;
     }
   }
 }

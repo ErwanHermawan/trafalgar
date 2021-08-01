@@ -3,9 +3,8 @@
   -------------------------------------------------------------------------------//
 
 // banner
-.banner
-  .container
-    each val in data
-      -
-        data = val
-      include ../components/hero-banner.pug
+.hero-banner.js-hero-banner
+  each val in data
+    -
+      data = val
+    include ../components/hero-banner.pug

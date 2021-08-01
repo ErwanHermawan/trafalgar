@@ -9,7 +9,8 @@ import {
   WinScroll,
   WindowResize,
   Header,
-  Footer
+  Footer,
+  HeroBanner
 } from 'components';
 
 // --- App
@@ -35,12 +36,13 @@ const App = (() => {
       // --- Global
       runTransition();
       showSiteContent();
-      BrowserCheck.init();
+      BrowserCheck.init();   
       // --- Project
       WindowResize.init();
       WinScroll.init();
       Header.init();
       Footer.init();
+      HeroBanner.init();
     })(jQuery);
   }
 
