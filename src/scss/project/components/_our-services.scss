@@ -14,6 +14,9 @@
         &__txt__title {
           color: color(blue, 1);
         }
+        &__box {
+          box-shadow: $shadowCardHover;
+        }
       }
     }
   }
@@ -24,6 +27,7 @@
     background-color: color(white);
     position: relative;
     padding: 56px 40px;
+    transition: all 0.3s ease;
     &__link {
       position: absolute;
       top: 0;

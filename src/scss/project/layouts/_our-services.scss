@@ -6,7 +6,6 @@
   $os: &;
   padding: 80px 0;
   position: relative;
-  text-align: center;
   @include medium {
     padding: 40px 0;
   }
@@ -25,19 +24,24 @@
       display: none;
     }
   }
+  &__head {
+    margin-bottom: 72px;
+    @include medium {
+      margin-bottom: 48px;
+    }
+    @include small {
+      margin-bottom: 32px;
+    }
+  }
   &__desc {
     @include font-size(18);
     font-weight: fw(light);
     text-align: center;
-    padding: 0 80px;
-    margin-bottom: 72px;
-    @include medium {
-      padding: 0;
-      margin-bottom: 60px;
-    }
+    max-width: 952px;
+    margin: 0 auto;
+    margin-bottom: 0;
     @include small {
       @include font-size(16);
-      margin-bottom: 32px;
     }
   }
   &__list {
@@ -48,6 +52,9 @@
     @include small {
       margin-bottom: 32px;
     }
+  }
+  &__btn {
+    text-align: center;
   }
   #{$os}__item {
     float: left;

@@ -11,12 +11,12 @@
         img.section-description__img__el(src="assets/img/dummy/"+data.img alt=data.title)/
       .section-description__txt
         .section-description__txt__wrapper
-          h3.section-description__title
+          h3.text-title.text--left
             | !{data.title}
           p.section-description__desc
             | !{data.desc}
           ='\n'
-          a.btn.btn--secondary(href=data.btnTo) 
+          a.btn.btn--secondary(href=data.btnTo)
             | !{data.txtBtn}
             if data.btnIcon !== undefined
               ='\n'

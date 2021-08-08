@@ -31,7 +31,7 @@
   &__txt {
     width: 50%;
     min-height: 398px;
-    padding-left: 140px;
+    padding-left: 142px;
     float: left;
     display: table;
     @include large {
@@ -69,7 +69,7 @@
       @include font-size(24);
     }
     &::after {
-      content: '';
+      content: "";
       display: block;
       height: 2px;
       width: 56px;
@@ -87,15 +87,15 @@
       @include font-size(16);
     }
   }
-  @keyframes animasi{
-    from{
+  @keyframes animasi {
+    from {
       transform: translateY(-4px);
       opacity: 1;
     }
-    to{
-     transform: translateY(4px);
-     opacity: 0.1;
-   }
+    to {
+      transform: translateY(4px);
+      opacity: 0.1;
+    }
   }
   .btn .icon-arrow-down {
     display: inline-block;
@@ -113,7 +113,7 @@
     }
     #{$sd}__txt {
       padding-left: 0;
-      padding-right: 140px;
+      padding-right: 142px;
       @include large {
         padding-right: 40px;
       }

@@ -23,11 +23,11 @@
   }
   &__bar {
     width: 20px;
-    right: 5px;
+    right: 6px;
     margin-top: -1px;
     &::before,
     &::after {
-      content: '';
+      content: "";
       width: 28px;
       right: 0;
     }

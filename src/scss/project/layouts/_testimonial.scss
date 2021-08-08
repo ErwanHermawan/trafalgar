@@ -1,0 +1,100 @@
+/* ==========================================================================
+   Layout: Testimonial
+   ========================================================================== */
+
+.testimonial {
+  $t: &;
+  padding: 60px 0 142px;
+  color: color(white);
+  @include medium {
+    padding: 40px 0;
+  }
+  &__box {
+    background-image: linear-gradient(
+      to left bottom,
+      color(blue, 2) 0%,
+      color(blue, 3) 100%
+    );
+    padding: 64px 118px;
+    border-radius: 24px;
+    position: relative;
+    @include medium {
+      padding: 60px 40px;
+    }
+    @include small {
+      padding: 40px 24px;
+    }
+  }
+  // carousel
+  .owl-item.active {
+    #{$t} {
+      &__avatar,
+      &__txt,
+      &__desc {
+        opacity: 1;
+        transform: none;
+        transition: all 1250ms ease 0.5s;
+      }
+    }
+  }
+  .owl-carousel {
+    .owl-nav,
+    .owl-dots {
+      position: absolute;
+      left: 50%;
+      bottom: -124px;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+    .owl-nav {
+      .owl-prev,
+      .owl-next {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        opacity: 1;
+        @include font-size(16);
+        color: color(blue, 1);
+        transition: all 350ms ease;
+        @include small {
+          @include font-size(16);
+        }
+        &.disabled {
+          opacity: 0.3;
+        }
+      }
+      .owl-prev {
+        right: 180px;
+        @include small {
+          right: 96px;
+        }
+      }
+      .owl-next {
+        left: 180px;
+        @include small {
+          left: 96px;
+        }
+      }
+    }
+    .owl-dot {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 18px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      opacity: 0.3;
+      background-color: color(blue, 1);
+      transition: all 350ms ease;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .owl-dot.active {
+      opacity: 1;
+    }
+  }
+}

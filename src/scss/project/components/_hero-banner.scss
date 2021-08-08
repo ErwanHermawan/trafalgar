@@ -4,9 +4,8 @@
 
 .hero-banner {
   &__item {
-    display: table;
-    width: 100%;
     padding: 24px 0 48px;
+    width: 100%;
     overflow: hidden;
     position: relative;
     @include medium {
@@ -34,8 +33,6 @@
     }
   }
   &__wrapper {
-    display: table-cell;
-    vertical-align: middle;
     @include clearfix;
   }
   &__img {

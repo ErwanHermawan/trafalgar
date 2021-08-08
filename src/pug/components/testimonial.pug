@@ -1,0 +1,16 @@
+//-------------------------------------------------------------------------------
+  @name: testimonial
+  -------------------------------------------------------------------------------//
+
+//- testimoni__item
+.testimonial__item
+  .testimonial__custommer
+    .testimonial__avatar
+      ='\n'
+      img.testimonial__avatar__el(src="assets/img/dummy/"+data.img alt=data.name)/
+    .testimonial__txt
+      p.testimonial__custommer__name !{data.name}
+      p.testimonial__custommer__position !{data.position}
+  .testimonial__desc
+    p.testimonial__desc__text
+      | !{data.testimoni}

@@ -10,7 +10,8 @@ import {
   WindowResize,
   Header,
   Footer,
-  HeroBanner
+  HeroBanner,
+  Testimonial
 } from 'components';
 
 // --- App
@@ -36,13 +37,14 @@ const App = (() => {
       // --- Global
       runTransition();
       showSiteContent();
-      BrowserCheck.init();   
+      BrowserCheck.init();
       // --- Project
       WindowResize.init();
       WinScroll.init();
       Header.init();
       Footer.init();
       HeroBanner.init();
+      Testimonial.init();
     })(jQuery);
   }
 
