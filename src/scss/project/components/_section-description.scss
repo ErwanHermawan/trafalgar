@@ -4,12 +4,16 @@
 
 .section-description {
   $sd: &;
-  padding: 56px 0;
+  position: relative;
+  padding: 120px 0;
   @include large {
-    padding: 48px 0;
+    padding: 96px 0;
   }
   @include medium {
-    padding: 40px 0;
+    padding: 72px 0;
+  }
+  @include small {
+    padding: 56px 0;
   }
   &__box {
     @include clearfix;
@@ -49,7 +53,6 @@
       min-height: initial;
       display: block;
       padding: 0;
-      text-align: center;
     }
     &__wrapper {
       width: 100%;
@@ -98,6 +101,7 @@
     }
   }
   .btn .icon-arrow-down {
+    @include font-size(12);
     display: inline-block;
     margin-left: 8px;
     animation: animasi 1s ease infinite;

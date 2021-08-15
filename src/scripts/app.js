@@ -11,7 +11,8 @@ import {
   Header,
   Footer,
   HeroBanner,
-  Testimonial
+  Testimonial,
+  Card
 } from 'components';
 
 // --- App
@@ -45,6 +46,7 @@ const App = (() => {
       Footer.init();
       HeroBanner.init();
       Testimonial.init();
+      Card.init();
     })(jQuery);
   }
 

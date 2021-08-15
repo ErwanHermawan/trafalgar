@@ -19,6 +19,9 @@
   color: color(white);
   user-select: none;
   transition: all 350ms ease;
+  @include small {
+    padding: 12px 40px;
+  }
   &--primary {
     background-image: linear-gradient(
       to right,

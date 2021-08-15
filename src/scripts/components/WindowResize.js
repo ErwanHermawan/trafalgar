@@ -6,7 +6,8 @@
 // --- components
 import {
   Header,
-  Footer
+  Footer,
+  Card
 } from 'components';
 
 // --- WindowResize
@@ -40,6 +41,7 @@ const WindowResize = (() => {
       Header.checkClass();
       Footer.footerSticky();
       Footer.destroyAccordion();
+      Card.setHeight();
     }
 
   }

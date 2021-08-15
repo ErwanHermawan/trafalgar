@@ -4,10 +4,16 @@
 
 .testimonial {
   $t: &;
-  padding: 60px 0 142px;
+  padding: 120px 0;
   color: color(white);
+  @include large {
+    padding: 96px 0;
+  }
   @include medium {
-    padding: 40px 0;
+    padding: 72px 0;
+  }
+  @include small {
+    padding: 56px 0;
   }
   &__box {
     background-image: linear-gradient(
@@ -45,6 +51,12 @@
       bottom: -124px;
       transform: translateX(-50%);
       z-index: 1;
+      @include medium {
+        bottom: -104px;
+      }
+      @include small {
+        bottom: -80px;
+      }
     }
     .owl-nav {
       .owl-prev,

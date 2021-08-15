@@ -7,8 +7,6 @@ Layout: hero banner
   $hb: &;
   position: relative;
   &__item {
-    opacity: 0;
-    transition: all 800ms ease;
     &::before {
       opacity: 0;
       transform: translateX(-32px);
@@ -27,22 +25,19 @@ Layout: hero banner
     transform: translateX(16px);
   }
   &__title {
-    transition: all 1000ms ease;
+    transition: all 1000ms ease 0s;
   }
   &__desc {
-    transition: all 1200ms ease;
+    transition: all 1200ms ease 0s;
   }
   &__btn {
-    transition: opacity 1000ms ease, transform 1000ms ease,
-      background-color 350ms ease, color 350ms ease;
+    transition: opacity 1000ms ease, transform 1000ms ease;
+    transition-delay: 0s;
   }
   &--single,
   .owl-item.active {
     #{$hb} {
       &__item {
-        opacity: 1;
-        transform: none;
-        transition: all 1750ms ease;
         &::before {
           opacity: 1;
           transform: translateX(0);
@@ -53,24 +48,23 @@ Layout: hero banner
         opacity: 1;
         transform: scaleX(1);
         transition: opacity 3500ms ease, transform 5000ms ease;
-        transition-delay: 0s;
+        transition-delay: 1000ms;
       }
       &__title,
       &__desc,
       &__btn {
         opacity: 1;
         transform: translateX(0);
-        transition: all 1750ms ease;
       }
       &__title {
-        transition-delay: 1200ms;
+        transition-delay: 500ms;
       }
       &__desc {
-        transition-delay: 1500ms;
+        transition-delay: 1000ms;
       }
       &__btn {
-        transition: opacity 1750ms ease 2000ms, transform 1750ms ease 2000ms,
-          background-color 350ms ease 0ms, color 350ms ease 0ms;
+        transition: opacity 1750ms ease, transform 1750ms ease;
+        transition-delay: 1500ms;
       }
     }
   }

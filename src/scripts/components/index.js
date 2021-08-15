@@ -9,6 +9,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import HeroBanner from "./HeroBanner";
 import Testimonial from "./Testimonial";
+import Card from "./Card";
 
 export {
   WinScroll,
@@ -16,5 +17,6 @@ export {
   Header,
   Footer,
   HeroBanner,
-  Testimonial
+  Testimonial,
+  Card
 };

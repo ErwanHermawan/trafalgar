@@ -9,13 +9,13 @@
         | !{data.title}
       p.our-services__desc
         | !{data.desc}
-    .our-services__list
+    .our-services__body
       each val in data.list
         -
           data = val
         include ../components/our-services.pug
-    .our-services__btn
+    .our-services__footer
       ='\n'
-      a.btn.btn--secondary(href="our-services.html")
+      .btn.btn--secondary(href="our-services.html")
         | Learn more
       ='\n'

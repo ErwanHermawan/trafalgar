@@ -22,13 +22,13 @@
       z-index: zi(banner-item-before);
       width: 130px;
       height: 115px;
-      background: url(../img/bg/element-1.png) no-repeat center/100%;
+      background: url(../img/bg/element1.svg) no-repeat center/100%;
       @include medium {
         top: 20px;
       }
       @include small {
-        content: none;
-        display: none;
+        width: 80px;
+        height: 71px;
       }
     }
   }

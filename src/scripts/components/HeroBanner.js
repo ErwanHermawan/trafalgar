@@ -4,7 +4,7 @@
 --------------------------------------------------------------------------------- */
 
 const HeroBanner = (() => {
-  
+
   // handleRunCarousel
   const handleRunCarousel = () => {
     const _selector = $('.js-hero-banner');
@@ -26,11 +26,14 @@ const HeroBanner = (() => {
         dots: true,
         nav: false,
         loop: false,
-        touchDrag: false,
         mouseDrag: false,
         autoplayHoverPause: true,
         animateOut: 'fadeOut',
-        autoplayTimeout: 8000
+        animateIn: 'fadeIn',
+        autoplayTimeout: 8000,
+        dotsSpeed: 1000,
+        autoplaySpeed: 1000,
+        dragEndSpeed: 750
       });
     } else {
       if(_selector.hasClass('owl-carousel')) {
