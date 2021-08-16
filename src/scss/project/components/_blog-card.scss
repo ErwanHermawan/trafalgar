@@ -27,6 +27,7 @@
     overflow: hidden;
     @include shadow(8);
     transition: all 0.3s ease;
+    background-color: color(white);
     &__link {
       position: absolute;
       top: 0;

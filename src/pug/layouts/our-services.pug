@@ -1,7 +1,7 @@
 //-------------------------------------------------------------------------------
-  @name: Blog
+  @name: Our Service
   -------------------------------------------------------------------------------//
-
+// our-services
 .our-services
   .container
     .our-services__head
@@ -10,12 +10,13 @@
       p.our-services__desc
         | !{data.desc}
     .our-services__body
-      each val in data.list
-        -
-          data = val
-        include ../components/our-services.pug
+      .our-services__list
+        each val in data.list
+          -
+            data = val
+          include ../components/our-services.pug
     .our-services__footer
       ='\n'
-      .btn.btn--secondary(href="our-services.html")
+      a.btn.btn--secondary(href="our-services.html")
         | Learn more
       ='\n'

@@ -18,37 +18,6 @@
   @include extra-small {
     padding: 72px 0 40px;
   }
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -120px;
-    width: 59%;
-    height: 48%;
-    background: url(../img/bg/bg1.svg) no-repeat center/100%;
-    z-index: -1;
-    @include medium {
-      content: none;
-      display: none;
-    }
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    right: calc(50% - 612px);
-    top: 50%;
-    z-index: -1;
-    height: 115px;
-    width: 130px;
-    background: url(../img/bg/element1.svg) no-repeat center/100%;
-    @include large {
-      right: 0;
-    }
-    @include medium {
-      content: none;
-    }
-  }
   &__head {
     margin-bottom: 54px;
     @include medium {
@@ -72,28 +41,68 @@
       @include font-size(16);
     }
   }
+  &__list {
+    @include clearfix;
+  }
   &__body {
+    position: relative;
     margin-left: -18px;
     margin-right: -18px;
-    margin-bottom: 72px;
-    @include clearfix;
+    margin-bottom: 54px;
     @include clearfix;
     @include medium {
       margin-left: -16px;
       margin-right: -16px;
-      margin-bottom: 56px;
-    }
-    @include small {
       margin-bottom: 48px;
     }
     @include extra-small {
-      margin-left: -24px;
-      margin-right: -24px;
+      margin: 0 -24px;
       @include scroll(x, touch, hide);
       font-size: 0;
-      padding-left: 24px;
-      padding-right: 24px;
-      margin-bottom: 32px;
+      padding: 24px 24px 56px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -506px;
+      width: 1118px;
+      height: 968px;
+      background: url(../img/bg/bg1.svg) no-repeat center/100%;
+      z-index: -1;
+      @include large {
+        width: 800px;
+        height: 693px;
+      }
+      @include medium {
+        left: -280px;
+        width: 640px;
+        height: 555px;
+      }
+      @include small {
+        content: none;
+        display: none;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: -48px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+      height: 115px;
+      width: 130px;
+      background: url(../img/bg/element1.svg) no-repeat center/100%;
+      @include large {
+        right: 0;
+        width: 104px;
+        width: 92px;
+      }
+      @include small {
+        content: none;
+      }
     }
   }
   &__footer {
@@ -113,7 +122,7 @@
       vertical-align: middle;
       width: 100%;
       max-width: 280px;
-      padding: 24px 0;
+      padding: 0;
       margin-right: 16px;
       white-space: normal;
       &:last-child {

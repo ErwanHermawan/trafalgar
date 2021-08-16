@@ -5,6 +5,8 @@ Layout: acticle
 .blog {
   $b: &;
   padding: 120px 0;
+  position: relative;
+  overflow: hidden;
   @include medium {
     padding: 88px 0 56px;
   }
@@ -13,6 +15,37 @@ Layout: acticle
   }
   @include extra-small {
     padding: 72px 0 40px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 42%;
+    transform: translateY(-42%);
+    right: -180px;
+    width: 778px;
+    height: 557px;
+    background: url(../img/bg/bg2.svg) no-repeat center/100%;
+    z-index: -1;
+    @include small {
+      content: none;
+      display: none;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: calc(50% - 696px);
+    bottom: -38px;
+    z-index: -1;
+    height: 115px;
+    width: 130px;
+    background: url(../img/bg/element1.svg) no-repeat center/100%;
+    @include large {
+      right: 0;
+    }
+    @include medium {
+      content: none;
+    }
   }
   &__head {
     margin-bottom: 54px;

@@ -5,7 +5,7 @@
 //section-description
 .section-description(class=data.modifier !== undefined ? 'section-description--' + data.modifier : '')
   .container
-    .section-description__box
+    .section-description__wrapper
       .section-description__img
         ='\n'
         img.section-description__img__el(src="assets/img/dummy/"+data.img alt=data.title)/
@@ -16,11 +16,11 @@
           p.section-description__desc
             | !{data.desc}
           ='\n'
-          a.btn.btn--secondary(href=data.btnTo)
-            | !{data.txtBtn}
-            if data.btnIcon !== undefined
+          a.btn.btn--secondary(href=data.btn.to)
+            | !{data.btn.text}
+            if data.btn.icon !== undefined
               ='\n'
-              i(class=data.btnIcon)
+              i(class=data.btn.icon)
               ='\n'
 ='\n'
 // /section-description
