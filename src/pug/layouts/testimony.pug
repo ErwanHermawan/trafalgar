@@ -1,0 +1,11 @@
+.testimony
+  .container
+    .testimony__box
+      .testimony__box__head
+        h2.text-title.text-title--white
+          | !{data.title}
+      .testimony__list.js-testimony
+        each val in data.testimony
+          -
+            data = val
+          include ../components/testimony.pug

@@ -8,7 +8,7 @@ import WindowResize from "./WindowResize";
 import Header from "./Header";
 import Footer from "./Footer";
 import HeroBanner from "./HeroBanner";
-import Testimonial from "./Testimonial";
+import Testimony from "./Testimony";
 import Card from "./Card";
 
 export {
@@ -17,6 +17,6 @@ export {
   Header,
   Footer,
   HeroBanner,
-  Testimonial,
+  Testimony,
   Card
 };

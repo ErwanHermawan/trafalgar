@@ -5,47 +5,15 @@ Layout: acticle
 .blog {
   $b: &;
   padding: 120px 0;
-  position: relative;
   overflow: hidden;
+  @include large {
+    padding: 96px 0;
+  }
   @include medium {
-    padding: 88px 0 56px;
+    padding: 72px 0;
   }
   @include small {
-    padding: 80px 0 48px;
-  }
-  @include extra-small {
-    padding: 72px 0 40px;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    top: 42%;
-    transform: translateY(-42%);
-    right: -180px;
-    width: 778px;
-    height: 557px;
-    background: url(../img/bg/bg2.svg) no-repeat center/100%;
-    z-index: -1;
-    @include small {
-      content: none;
-      display: none;
-    }
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    right: calc(50% - 696px);
-    bottom: -38px;
-    z-index: -1;
-    height: 115px;
-    width: 130px;
-    background: url(../img/bg/element1.svg) no-repeat center/100%;
-    @include large {
-      right: 0;
-    }
-    @include medium {
-      content: none;
-    }
+    padding: 48px 0;
   }
   &__head {
     margin-bottom: 54px;
@@ -60,29 +28,82 @@ Layout: acticle
     }
   }
   &__body {
-    margin-left: -18px;
-    margin-right: -18px;
-    margin-bottom: 72px;
-    @include clearfix;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -72px;
+      right: -504px;
+      width: 778px;
+      height: 557px;
+      background: url(../img/bg/bg2.svg) no-repeat center/100%;
+      z-index: -1;
+      @include large {
+        width: 700px;
+        height: 500px;
+        right: -270px;
+        top: -48px;
+      }
+      @include medium {
+        width: 680px;
+        height: 460px;
+        top: -24px;
+      }
+      @include small {
+        width: 600px;
+        height: 400px;
+        top: -16px;
+      }
+      @include extra-small {
+        top: 0;
+        width: 580px;
+        height: 360px;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -220px;
+      right: -130px;
+      z-index: -1;
+      height: 115px;
+      width: 130px;
+      background: url(../img/bg/element1.svg) no-repeat center/100%;
+      @include large {
+        width: 96px;
+        height: 88px;
+        bottom: -190px;
+        right: 0;
+      }
+      @include medium {
+        width: 88px;
+        height: 80px;
+        bottom: -160px;
+      }
+      @include small {
+        width: 80px;
+        height: 72px;
+        bottom: -130px;
+      }
+    }
+  }
+  &__list {
+    margin: 0 -18px;
+    padding-bottom: 54px;
     @include clearfix;
     @include medium {
-      margin-left: -32px;
-      margin-right: -32px;
-      margin-bottom: 56px;
+      margin: 0 -32px;
       @include scroll(x, touch, hide);
-      padding-left: 32px;
-      padding-right: 32px;
+      padding: 24px 32px 56px;
     }
     @include small {
-      margin-bottom: 48px;
+      padding-bottom: 48px;
     }
     @include extra-small {
-      margin-left: -24px;
-      margin-right: -24px;
+      margin: 0 -24px;
+      @include scroll(x, touch, hide);
       font-size: 0;
-      padding-left: 24px;
-      padding-right: 24px;
-      margin-bottom: 32px;
+      padding: 24px 24px 56px;
     }
   }
   &__btn {
@@ -98,7 +119,7 @@ Layout: acticle
       vertical-align: middle;
       width: 100%;
       max-width: 312px;
-      padding: 24px 0;
+      padding: 0;
       margin-right: 24px;
       white-space: normal;
       &:last-child {
@@ -107,7 +128,6 @@ Layout: acticle
     }
     @include extra-small {
       max-width: 280px;
-      padding: 24px 0;
       margin-right: 16px;
       &:last-child {
         margin-right: 24px;

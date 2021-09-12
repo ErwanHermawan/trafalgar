@@ -30,7 +30,7 @@ const Header = (() => {
 
   // --- handleCheckClass
   const handleCheckClass = () => {
-    if ($(window).width() >= 992) {
+    if (_windowTemp >= 992) {
       if ($('body').hasClass('show-nav')) {
         Scrolllable.enable();
         $('body').removeClass('show-nav');

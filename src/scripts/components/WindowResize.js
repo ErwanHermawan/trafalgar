@@ -41,7 +41,7 @@ const WindowResize = (() => {
       Header.checkClass();
       Footer.footerSticky();
       Footer.destroyAccordion();
-      Card.setHeight();
+      Card.checkHeight();
     }
 
   }

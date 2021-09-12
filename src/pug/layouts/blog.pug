@@ -8,10 +8,11 @@
     .blog__head
       h2.text-title !{data.title}
     .blog__body
-      each val in data.card
-        -
-          data = val
-        include ../components/blog-card.pug
+      .blog__list.js-blog-list
+        each val in data.card
+          -
+            data = val
+          include ../components/blog-card.pug
     .blog__btn
       ='\n'
       a.btn.btn--secondary(href='') View all

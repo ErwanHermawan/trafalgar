@@ -1,11 +1,12 @@
 /* ==========================================================================
-   Layout: Testimonial
+   Layout: Testimony
    ========================================================================== */
 
-.testimonial {
+.testimony {
   $t: &;
   padding: 120px 0;
   color: color(white);
+  overflow: hidden;
   @include large {
     padding: 96px 0;
   }
@@ -21,21 +22,57 @@
       color(blue, 2) 0%,
       color(blue, 3) 100%
     );
-    padding: 64px 118px;
+    padding: 64px 0 84px;
     border-radius: 24px;
     position: relative;
-    @include medium {
-      padding: 60px 40px;
-    }
     @include small {
-      padding: 40px 24px;
+      padding: 40px 0px 56px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 32px;
+      left: -48px;
+      z-index: -1;
+      height: 115px;
+      width: 130px;
+      background: url(../img/bg/element1.svg) no-repeat center/100%;
+      @include large {
+        width: 104px;
+        width: 92px;
+      }
+      @include small {
+        width: 80px;
+        height: 71px;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: -16px;
+      right: -48px;
+      z-index: 2;
+      height: 115px;
+      width: 130px;
+      background: url(../img/bg/element2.svg) no-repeat center/100%;
+      @include large {
+        width: 104px;
+        width: 92px;
+        right: -32px;
+        top: -24px;
+      }
+      @include small {
+        top: -8;
+        right: -24px;
+        width: 80px;
+        height: 71px;
+      }
     }
   }
   // carousel
   .owl-item.active {
     #{$t} {
-      &__avatar,
-      &__txt,
+      &__custommer,
       &__desc {
         opacity: 1;
         transform: none;
@@ -48,14 +85,14 @@
     .owl-dots {
       position: absolute;
       left: 50%;
-      bottom: -124px;
+      bottom: -138px;
       transform: translateX(-50%);
       z-index: 1;
       @include medium {
-        bottom: -104px;
+        bottom: -124px;
       }
       @include small {
-        bottom: -80px;
+        bottom: -104px;
       }
     }
     .owl-nav {
@@ -69,20 +106,20 @@
         color: color(blue, 1);
         transition: all 350ms ease;
         @include small {
-          @include font-size(16);
+          @include font-size(12);
         }
         &.disabled {
-          opacity: 0.3;
+          opacity: 0.5;
         }
       }
       .owl-prev {
-        right: 180px;
+        right: 140px;
         @include small {
           right: 96px;
         }
       }
       .owl-next {
-        left: 180px;
+        left: 140px;
         @include small {
           left: 96px;
         }
@@ -98,6 +135,10 @@
       opacity: 0.3;
       background-color: color(blue, 1);
       transition: all 350ms ease;
+      @include small {
+        width: 8px;
+        height: 8px;
+      }
       &:last-child {
         margin-right: 0;
       }

@@ -1,13 +1,13 @@
 /* ------------------------------------------------------------------------------
-@name: Testimonial
+@name: Testimony
 --------------------------------------------------------------------------------- */
 
-const Testimonial = (() => {
+const Testimony = (() => {
 
   // handleRunCarousel
   const handleRunCarousel = () => {
-    const selector =  $('.js-testimonial');
-    const itemLength = $('.js-testimonial .testimonial__item').length;
+    const selector =  $('.js-testimony');
+    const itemLength = $('.js-testimony .testimony__item').length;
     const itemRun = 1;
 
     // destroy carousel
@@ -49,4 +49,4 @@ const Testimonial = (() => {
 
 })();
 
-export default Testimonial
+export default Testimony

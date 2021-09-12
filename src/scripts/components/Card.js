@@ -5,27 +5,41 @@
 
 // --- Card
 const Card = (() => {
-  const handleSetHeight = () => {
+  // --- handleSet
+  const handleSet = () => {
+    handleCheckHeight();
+  }
+
+  // --- handleCheckHeight
+  const handleCheckHeight = () => {
     let _height = 0;
-
-    $('.js-blog-card').each((i, el) => {
-      if ($(el).find('.blog__box').outerHeight() > _height) {
-        _height = $(el).find('.blog__box').outerHeight();
+    handleResetHeight();
+    $('.js-blog-list .blog__card').each((i, e) => {
+      if (_height < $(e).find('.blog__txt').height()) {
+        _height = $(e).find('.blog__txt').height();
       }
-
-      $('.js-blog-card .blog__box').height(_height);
     });
+    $('.blog__txt').height(_height);
+  }
+
+  const handleResetHeight = () => {
+    let _attr = $('.blog__txt').attr('style');
+    // For some browsers, `attr` is undefined; for others,
+    // `attr` is false.  Check for both.
+    if (typeof _attr !== 'undefined' && _attr !== false) {
+      $('.blog__txt').removeAttr('style');
+    }
   }
 
   // --- init
   const init = () => {
-    handleSetHeight();
+    handleSet();
   }
 
   // --- return
   return {
     init,
-    setHeight: handleSetHeight
+    checkHeight: handleSet
   }
 
 })();

@@ -59,6 +59,7 @@
     padding-top: 145px;
     padding-right: 74px;
     @include large {
+      padding-top: 72px;
       padding-right: 48px;
     }
     @include medium {
