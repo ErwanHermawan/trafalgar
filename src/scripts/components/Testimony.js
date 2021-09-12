@@ -21,7 +21,7 @@ const Testimony = (() => {
         dots: true,
         nav: true,
         navText: ["<i class='icon-arrow-left'></i>","<i class='icon-arrow-right'></i>"],
-        touchDrag: false,
+        touchDrag: true,
         mouseDrag: false,
         animateOut: 'fadeOut',
         responsive : {
