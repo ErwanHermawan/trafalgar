@@ -29,10 +29,10 @@
     opacity: 0;
     transition: all 0.75s ease;
     @include medium {
-      width: 40%;
+      display: block;
+      margin: 0 auto 32px;
     }
     @include small {
-      display: block;
       width: 100%;
       margin-bottom: 24px;
     }
@@ -52,10 +52,11 @@
   }
   &__txt {
     padding-left: 32px;
-    @include medium {
+    @include small {
       display: block;
+      width: 100%;
       text-align: center;
-      padding: 0;
+      padding-left: 0;
     }
   }
   &__avatar {
@@ -68,10 +69,10 @@
     @include medium {
       width: 120px;
       height: 120px;
-      display: block;
-      margin: 0 auto 16px;
     }
     @include small {
+      display: block;
+      margin: 0 auto 16px;
       width: 80px;
       height: 80px;
     }
@@ -88,7 +89,7 @@
     transform: translateX(24px);
     opacity: 0;
     transition: all 0.75s ease;
-    @include small {
+    @include medium {
       display: block;
       width: 100%;
       text-align: center;

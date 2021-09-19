@@ -118,13 +118,15 @@ const BUILD_PATH = {
   readMe: `${BUILD}/assets/**/**/*.md`,
   others: {
     forbidden: [
+      `${BUILD}/assets`,
       `${BUILD}/assets/css`,
       `${BUILD}/assets/fonts`,
       `${BUILD}/assets/img`,
       `${BUILD}/assets/img/bg`,
       `${BUILD}/assets/img/dummy`,
       `${BUILD}/assets/img/homescreen`,
-      `${BUILD}/assets/img/icons`,
+      `${BUILD}/assets/img/default`,
+      `${BUILD}/assets/img/icon`,
       `${BUILD}/assets/img/logo`,
       `${BUILD}/assets/js`,
       `${BUILD}/assets/js/data`,
