@@ -97,7 +97,9 @@ Layout: Footer
     }
     @include small {
       @include font-size(18);
-      margin-bottom: 8px;
+      margin-bottom: 16px;
+    }
+    @include x-small {
       &::after {
         content: "\e907";
         font-family: ff(family-icon);

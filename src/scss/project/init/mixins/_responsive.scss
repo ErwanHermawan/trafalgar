@@ -23,8 +23,8 @@
   }
 }
 
-// extra-small
-@mixin extra-small {
+// x-small
+@mixin x-small {
   @media only screen and (max-width: screen(extra-small)) {
     @content;
   }

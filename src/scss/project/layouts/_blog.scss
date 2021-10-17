@@ -23,7 +23,7 @@ Layout: acticle
     @include small {
       margin-bottom: 32px;
     }
-    @include extra-small {
+    @include x-small {
       margin-bottom: 24px;
     }
   }
@@ -54,7 +54,7 @@ Layout: acticle
         height: 400px;
         top: -16px;
       }
-      @include extra-small {
+      @include x-small {
         top: 0;
         width: 580px;
         height: 360px;
@@ -99,7 +99,7 @@ Layout: acticle
     @include small {
       padding-bottom: 48px;
     }
-    @include extra-small {
+    @include x-small {
       margin: 0 -24px;
       @include scroll(x, touch, hide);
       font-size: 0;
@@ -126,7 +126,7 @@ Layout: acticle
         margin-right: 24px;
       }
     }
-    @include extra-small {
+    @include x-small {
       max-width: 280px;
       margin-right: 16px;
       &:last-child {

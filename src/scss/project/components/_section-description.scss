@@ -15,7 +15,7 @@
   @include small {
     padding: 64px 0;
   }
-  @include extra-small {
+  @include x-small {
     padding: 48px 0;
   }
   &__wrapper {
@@ -51,7 +51,7 @@
       @include small {
         max-width: 90%;
       }
-      @include extra-small {
+      @include x-small {
         max-width: 100%;
       }
     }
